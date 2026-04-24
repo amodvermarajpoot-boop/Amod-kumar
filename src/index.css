@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#030712] text-white antialiased overflow-hidden;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/[0.02] backdrop-blur-3xl border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+  }
+
+  .voice-orb {
+    @apply bg-[radial-gradient(circle_at_35%_35%,#818cf8_0%,#4f46e5_60%,#3730a3_100%)] 
+           shadow-[0_0_60px_rgba(79,70,229,0.35),inset_0_0_20px_rgba(255,255,255,0.2)];
+  }
+
+  .waveform-bar {
+    @apply w-[3px] rounded-full bg-linear-to-t from-indigo-500/10 to-white/80 transition-all duration-300;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}

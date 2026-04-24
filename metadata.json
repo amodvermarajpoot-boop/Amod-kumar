@@ -1,0 +1,11 @@
+{
+  "name": "Remix: Amod Voice Assistant",
+  "description": "An intelligent voice-controlled assistant powered by Gemini AI, featuring real-time speech recognition and synthesis.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "voice_interaction",
+    "ai_reasoning"
+  ]
+}
